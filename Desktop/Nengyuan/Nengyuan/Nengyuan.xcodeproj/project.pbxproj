@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		78ABF8DB43A037A8E969941C /* libPods-NengyuanTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3813A98C9F4957528CE73F19 /* libPods-NengyuanTests.a */; };
+		A540299F2379BC08007BB846 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A540299D2379BC08007BB846 /* MainViewController.m */; };
+		A54029A02379BC08007BB846 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A540299E2379BC08007BB846 /* MainViewController.xib */; };
 		A596E74D2379B92A009A3AD4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A596E74C2379B92A009A3AD4 /* AppDelegate.m */; };
 		A596E7502379B92A009A3AD4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A596E74F2379B92A009A3AD4 /* ViewController.m */; };
 		A596E7532379B92A009A3AD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A596E7512379B92A009A3AD4 /* Main.storyboard */; };
@@ -16,6 +19,8 @@
 		A596E75E2379B92C009A3AD4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A596E75D2379B92C009A3AD4 /* main.m */; };
 		A596E7682379B92C009A3AD4 /* NengyuanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A596E7672379B92C009A3AD4 /* NengyuanTests.m */; };
 		A596E7732379B92C009A3AD4 /* NengyuanUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A596E7722379B92C009A3AD4 /* NengyuanUITests.m */; };
+		BF1530BE79E75FF0419E329A /* libPods-Nengyuan.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C6C854FA11E1F4410C111AA /* libPods-Nengyuan.a */; };
+		CBE497A69B622552B6566AEE /* libPods-NengyuanUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 10986496A68A2B4B14277AC1 /* libPods-NengyuanUITests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +41,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0002F1C6E0DAED3F15581182 /* Pods-NengyuanTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NengyuanTests.debug.xcconfig"; path = "Target Support Files/Pods-NengyuanTests/Pods-NengyuanTests.debug.xcconfig"; sourceTree = "<group>"; };
+		10986496A68A2B4B14277AC1 /* libPods-NengyuanUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NengyuanUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C6C854FA11E1F4410C111AA /* libPods-Nengyuan.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Nengyuan.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3813A98C9F4957528CE73F19 /* libPods-NengyuanTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NengyuanTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F60BF9C4540761632FE851C /* Pods-Nengyuan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nengyuan.release.xcconfig"; path = "Target Support Files/Pods-Nengyuan/Pods-Nengyuan.release.xcconfig"; sourceTree = "<group>"; };
+		4E2B3FC55A1BCD944657C83F /* Pods-NengyuanTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NengyuanTests.release.xcconfig"; path = "Target Support Files/Pods-NengyuanTests/Pods-NengyuanTests.release.xcconfig"; sourceTree = "<group>"; };
+		6E40AC465932DF772B6AAAEC /* Pods-NengyuanUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NengyuanUITests.debug.xcconfig"; path = "Target Support Files/Pods-NengyuanUITests/Pods-NengyuanUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8B44AEE45179B051C0A47479 /* Pods-Nengyuan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nengyuan.debug.xcconfig"; path = "Target Support Files/Pods-Nengyuan/Pods-Nengyuan.debug.xcconfig"; sourceTree = "<group>"; };
+		A540299C2379BC08007BB846 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		A540299D2379BC08007BB846 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		A540299E2379BC08007BB846 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		A54029A22379BF20007BB846 /* nengyuan.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = nengyuan.pch; sourceTree = "<group>"; };
+		A54029A32379C0C5007BB846 /* NYCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NYCommon.h; sourceTree = "<group>"; };
 		A596E7482379B92A009A3AD4 /* Nengyuan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nengyuan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A596E74B2379B92A009A3AD4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A596E74C2379B92A009A3AD4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -53,6 +71,7 @@
 		A596E76E2379B92C009A3AD4 /* NengyuanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NengyuanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A596E7722379B92C009A3AD4 /* NengyuanUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NengyuanUITests.m; sourceTree = "<group>"; };
 		A596E7742379B92C009A3AD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0530AC4876629F49F4DCAD5 /* Pods-NengyuanUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NengyuanUITests.release.xcconfig"; path = "Target Support Files/Pods-NengyuanUITests/Pods-NengyuanUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF1530BE79E75FF0419E329A /* libPods-Nengyuan.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78ABF8DB43A037A8E969941C /* libPods-NengyuanTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,12 +95,34 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBE497A69B622552B6566AEE /* libPods-NengyuanUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		64E2479B7B000E4C58A29D66 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8B44AEE45179B051C0A47479 /* Pods-Nengyuan.debug.xcconfig */,
+				3F60BF9C4540761632FE851C /* Pods-Nengyuan.release.xcconfig */,
+				0002F1C6E0DAED3F15581182 /* Pods-NengyuanTests.debug.xcconfig */,
+				4E2B3FC55A1BCD944657C83F /* Pods-NengyuanTests.release.xcconfig */,
+				6E40AC465932DF772B6AAAEC /* Pods-NengyuanUITests.debug.xcconfig */,
+				F0530AC4876629F49F4DCAD5 /* Pods-NengyuanUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A54029A12379BEDA007BB846 /* Common(常量) */ = {
+			isa = PBXGroup;
+			children = (
+				A54029A32379C0C5007BB846 /* NYCommon.h */,
+			);
+			path = "Common(常量)";
+			sourceTree = "<group>";
+		};
 		A596E73F2379B92A009A3AD4 = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +130,8 @@
 				A596E7662379B92C009A3AD4 /* NengyuanTests */,
 				A596E7712379B92C009A3AD4 /* NengyuanUITests */,
 				A596E7492379B92A009A3AD4 /* Products */,
+				64E2479B7B000E4C58A29D66 /* Pods */,
+				E2A8A34E7C9863D00F789340 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,13 +150,18 @@
 			children = (
 				A596E74B2379B92A009A3AD4 /* AppDelegate.h */,
 				A596E74C2379B92A009A3AD4 /* AppDelegate.m */,
+				A540299C2379BC08007BB846 /* MainViewController.h */,
+				A540299D2379BC08007BB846 /* MainViewController.m */,
+				A540299E2379BC08007BB846 /* MainViewController.xib */,
 				A596E74E2379B92A009A3AD4 /* ViewController.h */,
 				A596E74F2379B92A009A3AD4 /* ViewController.m */,
+				A54029A12379BEDA007BB846 /* Common(常量) */,
 				A596E7512379B92A009A3AD4 /* Main.storyboard */,
 				A596E7572379B92C009A3AD4 /* Assets.xcassets */,
 				A596E7592379B92C009A3AD4 /* LaunchScreen.storyboard */,
 				A596E75C2379B92C009A3AD4 /* Info.plist */,
 				A596E75D2379B92C009A3AD4 /* main.m */,
+				A54029A22379BF20007BB846 /* nengyuan.pch */,
 				A596E7542379B92A009A3AD4 /* Nengyuan.xcdatamodeld */,
 			);
 			path = Nengyuan;
@@ -135,6 +185,16 @@
 			path = NengyuanUITests;
 			sourceTree = "<group>";
 		};
+		E2A8A34E7C9863D00F789340 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2C6C854FA11E1F4410C111AA /* libPods-Nengyuan.a */,
+				3813A98C9F4957528CE73F19 /* libPods-NengyuanTests.a */,
+				10986496A68A2B4B14277AC1 /* libPods-NengyuanUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -142,9 +202,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A596E7772379B92C009A3AD4 /* Build configuration list for PBXNativeTarget "Nengyuan" */;
 			buildPhases = (
+				008C0B0CDB220D6655C0F3B9 /* [CP] Check Pods Manifest.lock */,
 				A596E7442379B92A009A3AD4 /* Sources */,
 				A596E7452379B92A009A3AD4 /* Frameworks */,
 				A596E7462379B92A009A3AD4 /* Resources */,
+				7B2CCE4C2613E5C71FA08ACD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -159,6 +221,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A596E77A2379B92C009A3AD4 /* Build configuration list for PBXNativeTarget "NengyuanTests" */;
 			buildPhases = (
+				AA5F8F2534824C3701813FC5 /* [CP] Check Pods Manifest.lock */,
 				A596E75F2379B92C009A3AD4 /* Sources */,
 				A596E7602379B92C009A3AD4 /* Frameworks */,
 				A596E7612379B92C009A3AD4 /* Resources */,
@@ -177,6 +240,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A596E77D2379B92C009A3AD4 /* Build configuration list for PBXNativeTarget "NengyuanUITests" */;
 			buildPhases = (
+				C1DEAB11A0AC1B4730BDA165 /* [CP] Check Pods Manifest.lock */,
 				A596E76A2379B92C009A3AD4 /* Sources */,
 				A596E76B2379B92C009A3AD4 /* Frameworks */,
 				A596E76C2379B92C009A3AD4 /* Resources */,
@@ -241,6 +305,7 @@
 				A596E75B2379B92C009A3AD4 /* LaunchScreen.storyboard in Resources */,
 				A596E7582379B92C009A3AD4 /* Assets.xcassets in Resources */,
 				A596E7532379B92A009A3AD4 /* Main.storyboard in Resources */,
+				A54029A02379BC08007BB846 /* MainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +325,99 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		008C0B0CDB220D6655C0F3B9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Nengyuan-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7B2CCE4C2613E5C71FA08ACD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Nengyuan/Pods-Nengyuan-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/PGDatePicker/PGDatePicker/PGDatePicker.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/PGDatePicker.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Nengyuan/Pods-Nengyuan-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AA5F8F2534824C3701813FC5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NengyuanTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C1DEAB11A0AC1B4730BDA165 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NengyuanUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A596E7442379B92A009A3AD4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -268,6 +426,7 @@
 				A596E7502379B92A009A3AD4 /* ViewController.m in Sources */,
 				A596E7562379B92A009A3AD4 /* Nengyuan.xcdatamodeld in Sources */,
 				A596E75E2379B92C009A3AD4 /* main.m in Sources */,
+				A540299F2379BC08007BB846 /* MainViewController.m in Sources */,
 				A596E74D2379B92A009A3AD4 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,9 +596,12 @@
 		};
 		A596E7782379B92C009A3AD4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B44AEE45179B051C0A47479 /* Pods-Nengyuan.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = $SRCROOT/Nengyuan/nengyuan.pch;
 				INFOPLIST_FILE = Nengyuan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -453,9 +615,12 @@
 		};
 		A596E7792379B92C009A3AD4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F60BF9C4540761632FE851C /* Pods-Nengyuan.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = $SRCROOT/Nengyuan/nengyuan.pch;
 				INFOPLIST_FILE = Nengyuan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -469,6 +634,7 @@
 		};
 		A596E77B2379B92C009A3AD4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0002F1C6E0DAED3F15581182 /* Pods-NengyuanTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -487,6 +653,7 @@
 		};
 		A596E77C2379B92C009A3AD4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E2B3FC55A1BCD944657C83F /* Pods-NengyuanTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -505,6 +672,7 @@
 		};
 		A596E77E2379B92C009A3AD4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E40AC465932DF772B6AAAEC /* Pods-NengyuanUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = NengyuanUITests/Info.plist;
@@ -522,6 +690,7 @@
 		};
 		A596E77F2379B92C009A3AD4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0530AC4876629F49F4DCAD5 /* Pods-NengyuanUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = NengyuanUITests/Info.plist;
