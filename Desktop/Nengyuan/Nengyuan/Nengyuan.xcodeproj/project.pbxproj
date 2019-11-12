@@ -10,8 +10,9 @@
 		78ABF8DB43A037A8E969941C /* libPods-NengyuanTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3813A98C9F4957528CE73F19 /* libPods-NengyuanTests.a */; };
 		A540299F2379BC08007BB846 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A540299D2379BC08007BB846 /* MainViewController.m */; };
 		A54029A02379BC08007BB846 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A540299E2379BC08007BB846 /* MainViewController.xib */; };
+		A54029A7237A373C007BB846 /* NYMainCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A54029A5237A373C007BB846 /* NYMainCollectionViewCell.m */; };
+		A54029A8237A373C007BB846 /* NYMainCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A54029A6237A373C007BB846 /* NYMainCollectionViewCell.xib */; };
 		A596E74D2379B92A009A3AD4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A596E74C2379B92A009A3AD4 /* AppDelegate.m */; };
-		A596E7502379B92A009A3AD4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A596E74F2379B92A009A3AD4 /* ViewController.m */; };
 		A596E7532379B92A009A3AD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A596E7512379B92A009A3AD4 /* Main.storyboard */; };
 		A596E7562379B92A009A3AD4 /* Nengyuan.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A596E7542379B92A009A3AD4 /* Nengyuan.xcdatamodeld */; };
 		A596E7582379B92C009A3AD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A596E7572379B92C009A3AD4 /* Assets.xcassets */; };
@@ -54,11 +55,12 @@
 		A540299E2379BC08007BB846 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		A54029A22379BF20007BB846 /* nengyuan.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = nengyuan.pch; sourceTree = "<group>"; };
 		A54029A32379C0C5007BB846 /* NYCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NYCommon.h; sourceTree = "<group>"; };
+		A54029A4237A373C007BB846 /* NYMainCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NYMainCollectionViewCell.h; sourceTree = "<group>"; };
+		A54029A5237A373C007BB846 /* NYMainCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NYMainCollectionViewCell.m; sourceTree = "<group>"; };
+		A54029A6237A373C007BB846 /* NYMainCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NYMainCollectionViewCell.xib; sourceTree = "<group>"; };
 		A596E7482379B92A009A3AD4 /* Nengyuan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nengyuan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A596E74B2379B92A009A3AD4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A596E74C2379B92A009A3AD4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		A596E74E2379B92A009A3AD4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		A596E74F2379B92A009A3AD4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		A596E7522379B92A009A3AD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A596E7552379B92A009A3AD4 /* Nengyuan.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Nengyuan.xcdatamodel; sourceTree = "<group>"; };
 		A596E7572379B92C009A3AD4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -153,8 +155,9 @@
 				A540299C2379BC08007BB846 /* MainViewController.h */,
 				A540299D2379BC08007BB846 /* MainViewController.m */,
 				A540299E2379BC08007BB846 /* MainViewController.xib */,
-				A596E74E2379B92A009A3AD4 /* ViewController.h */,
-				A596E74F2379B92A009A3AD4 /* ViewController.m */,
+				A54029A4237A373C007BB846 /* NYMainCollectionViewCell.h */,
+				A54029A5237A373C007BB846 /* NYMainCollectionViewCell.m */,
+				A54029A6237A373C007BB846 /* NYMainCollectionViewCell.xib */,
 				A54029A12379BEDA007BB846 /* Common(常量) */,
 				A596E7512379B92A009A3AD4 /* Main.storyboard */,
 				A596E7572379B92C009A3AD4 /* Assets.xcassets */,
@@ -303,6 +306,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A596E75B2379B92C009A3AD4 /* LaunchScreen.storyboard in Resources */,
+				A54029A8237A373C007BB846 /* NYMainCollectionViewCell.xib in Resources */,
 				A596E7582379B92C009A3AD4 /* Assets.xcassets in Resources */,
 				A596E7532379B92A009A3AD4 /* Main.storyboard in Resources */,
 				A54029A02379BC08007BB846 /* MainViewController.xib in Resources */,
@@ -423,9 +427,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A596E7502379B92A009A3AD4 /* ViewController.m in Sources */,
 				A596E7562379B92A009A3AD4 /* Nengyuan.xcdatamodeld in Sources */,
 				A596E75E2379B92C009A3AD4 /* main.m in Sources */,
+				A54029A7237A373C007BB846 /* NYMainCollectionViewCell.m in Sources */,
 				A540299F2379BC08007BB846 /* MainViewController.m in Sources */,
 				A596E74D2379B92A009A3AD4 /* AppDelegate.m in Sources */,
 			);

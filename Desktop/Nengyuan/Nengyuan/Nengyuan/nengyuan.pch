@@ -22,7 +22,14 @@
 #define kSCREEN_SIZE        [[UIScreen mainScreen] bounds].size
 #define ScreenHeight        [[UIScreen mainScreen] bounds].size.height
 #define ScreenWidth         [[UIScreen mainScreen] bounds].size.width
-
+#define nearStatusBar   (kDevice_Is_iPhoneX ? 44 : 0)
+#define StatusBarHeight   (kDevice_Is_iPhoneX ? 44 : 20)
+#define NavHeight   (StatusBarHeight + 44)
+#define safeAreaHeight   (kDevice_Is_iPhoneX ? 34 : 0)
+#define TabBarHeight      (safeAreaHeight + 49)
+#define tableHeight (ScreenHeight - NavHeight)
+// 判断是否是iPhone X
+#define kDevice_Is_iPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
 
 //一个公共的用于处理解析数据的方法，过滤NSNull、nil、number、bool等类型转换成字符串
 #define GeneralHandlerToFiltNullValue(value)                                                            \
