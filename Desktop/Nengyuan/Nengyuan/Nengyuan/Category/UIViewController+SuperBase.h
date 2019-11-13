@@ -21,6 +21,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 -(void)setStatusBarBackgroundColorWithBlueColor;
 
+/**
+ *  字符串转json
+ */
+-(NSDictionary*)dictionaryWithJsonString:(NSString*)jsonString;
+
 @end
 
 NS_ASSUME_NONNULL_END

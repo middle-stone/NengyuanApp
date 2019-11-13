@@ -7,7 +7,7 @@
 //
 
 #import "BarLineChartView.h"
-#import "Masonry/Masonry.h"
+//#import "Masonry/Masonry.h"
 @interface BarLineChartView()
 
 @property (nonatomic, strong) CAShapeLayer *lineChartLayer;
@@ -46,7 +46,7 @@ static CGFloat marge = 15; // 调整间距
         self.lineMultiple = rightMut;
         self.Ylines = rightLines;
         [self createLabelY:ylines multiple:mutiple];
-        [self createRightLabelY:rightLines multiple:rightMut];
+//        [self createRightLabelY:rightLines multiple:rightMut];
         [self setLineDashWithYines:ylines];
     }
     return self;
@@ -168,7 +168,7 @@ static CGFloat marge = 15; // 调整间距
         bgview.userInteractionEnabled = YES;
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tagClick:)];
         [bgview addGestureRecognizer:tap];
-        NSArray *colorArray = @[[UIColor blueColor],[UIColor cyanColor],[UIColor greenColor],[UIColor yellowColor]];
+        NSArray *colorArray = @[ColorWithRGB(85, 141, 214),ColorWithRGB(255, 213, 4),ColorWithRGB(171, 204, 100),ColorWithRGB(76, 173, 229)];
 
 
         float lastPercent = 0;    // 线的初始位置的百分比
@@ -287,7 +287,10 @@ static CGFloat marge = 15; // 调整间距
 - (void)reloadData{
     [self createLabelXWithXdataArray:self.xdataArr];
     [self drawBarChartViewWithData:self.barDataArr withPercent:self.barPercentArr];
-    [self drawLineChartWithData:self.lineDataArr];
+    if (self.isShowLine && self.lineDataArr.count) {
+        [self createRightLabelY:self.Ylines multiple:self.lineMultiple];
+        [self drawLineChartWithData:self.lineDataArr];
+    }
 
    
 }
