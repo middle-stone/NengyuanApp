@@ -9,6 +9,7 @@
 #ifndef NYCommon_h
 #define NYCommon_h
 
+#import "UIViewController+SuperBase.h"
 
 
 

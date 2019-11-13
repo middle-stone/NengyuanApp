@@ -12,6 +12,24 @@
 		A54029A02379BC08007BB846 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A540299E2379BC08007BB846 /* MainViewController.xib */; };
 		A54029A7237A373C007BB846 /* NYMainCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A54029A5237A373C007BB846 /* NYMainCollectionViewCell.m */; };
 		A54029A8237A373C007BB846 /* NYMainCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A54029A6237A373C007BB846 /* NYMainCollectionViewCell.xib */; };
+		A5402A3F237BD5FF007BB846 /* UIViewController+SuperBase.m in Sources */ = {isa = PBXBuildFile; fileRef = A5402A3E237BD5FF007BB846 /* UIViewController+SuperBase.m */; };
+		A5402A42237BDB46007BB846 /* GJMultipleMarkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5402A40237BDB46007BB846 /* GJMultipleMarkViewController.m */; };
+		A5402A48237BDDFA007BB846 /* NYYearGeneralController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5402A46237BDDFA007BB846 /* NYYearGeneralController.m */; };
+		A5402A49237BDDFA007BB846 /* NYYearGeneralController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5402A47237BDDFA007BB846 /* NYYearGeneralController.xib */; };
+		A5402A4D237BDE38007BB846 /* SocialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5402A4B237BDE38007BB846 /* SocialViewController.m */; };
+		A5402A4E237BDE38007BB846 /* SocialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5402A4C237BDE38007BB846 /* SocialViewController.xib */; };
+		A5402A52237BDE56007BB846 /* EnergyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5402A50237BDE56007BB846 /* EnergyViewController.m */; };
+		A5402A53237BDE56007BB846 /* EnergyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5402A51237BDE56007BB846 /* EnergyViewController.xib */; };
+		A5402A57237BDE70007BB846 /* ElectricityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5402A55237BDE70007BB846 /* ElectricityViewController.m */; };
+		A5402A58237BDE70007BB846 /* ElectricityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5402A56237BDE70007BB846 /* ElectricityViewController.xib */; };
+		A5402A5C237BE102007BB846 /* PollutantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5402A5A237BE102007BB846 /* PollutantViewController.m */; };
+		A5402A5D237BE102007BB846 /* PollutantViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5402A5B237BE102007BB846 /* PollutantViewController.xib */; };
+		A5402A60237BE3E3007BB846 /* QYFatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5402A5F237BE3E3007BB846 /* QYFatherViewController.m */; };
+		A5402A66237BEEBA007BB846 /* ModelNetWorkingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A5402A64237BEEBA007BB846 /* ModelNetWorkingHelper.m */; };
+		A5402A67237BEEBA007BB846 /* NetWorkingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A5402A65237BEEBA007BB846 /* NetWorkingHelper.m */; };
+		A5402A6A237BEF22007BB846 /* YearGeneralManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A5402A69237BEF22007BB846 /* YearGeneralManager.m */; };
+		A5402A71237BFFFE007BB846 /* IndustrialView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5402A70237BFFFE007BB846 /* IndustrialView.m */; };
+		A5402A74237C007C007BB846 /* BarLineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5402A73237C007C007BB846 /* BarLineChartView.m */; };
 		A596E74D2379B92A009A3AD4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A596E74C2379B92A009A3AD4 /* AppDelegate.m */; };
 		A596E7532379B92A009A3AD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A596E7512379B92A009A3AD4 /* Main.storyboard */; };
 		A596E7562379B92A009A3AD4 /* Nengyuan.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A596E7542379B92A009A3AD4 /* Nengyuan.xcdatamodeld */; };
@@ -58,6 +76,37 @@
 		A54029A4237A373C007BB846 /* NYMainCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NYMainCollectionViewCell.h; sourceTree = "<group>"; };
 		A54029A5237A373C007BB846 /* NYMainCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NYMainCollectionViewCell.m; sourceTree = "<group>"; };
 		A54029A6237A373C007BB846 /* NYMainCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NYMainCollectionViewCell.xib; sourceTree = "<group>"; };
+		A5402A3D237BD5FF007BB846 /* UIViewController+SuperBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SuperBase.h"; sourceTree = "<group>"; };
+		A5402A3E237BD5FF007BB846 /* UIViewController+SuperBase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SuperBase.m"; sourceTree = "<group>"; };
+		A5402A40237BDB46007BB846 /* GJMultipleMarkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GJMultipleMarkViewController.m; sourceTree = "<group>"; };
+		A5402A41237BDB46007BB846 /* GJMultipleMarkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GJMultipleMarkViewController.h; sourceTree = "<group>"; };
+		A5402A45237BDDFA007BB846 /* NYYearGeneralController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NYYearGeneralController.h; sourceTree = "<group>"; };
+		A5402A46237BDDFA007BB846 /* NYYearGeneralController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NYYearGeneralController.m; sourceTree = "<group>"; };
+		A5402A47237BDDFA007BB846 /* NYYearGeneralController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NYYearGeneralController.xib; sourceTree = "<group>"; };
+		A5402A4A237BDE38007BB846 /* SocialViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SocialViewController.h; sourceTree = "<group>"; };
+		A5402A4B237BDE38007BB846 /* SocialViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SocialViewController.m; sourceTree = "<group>"; };
+		A5402A4C237BDE38007BB846 /* SocialViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SocialViewController.xib; sourceTree = "<group>"; };
+		A5402A4F237BDE56007BB846 /* EnergyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnergyViewController.h; sourceTree = "<group>"; };
+		A5402A50237BDE56007BB846 /* EnergyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EnergyViewController.m; sourceTree = "<group>"; };
+		A5402A51237BDE56007BB846 /* EnergyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EnergyViewController.xib; sourceTree = "<group>"; };
+		A5402A54237BDE70007BB846 /* ElectricityViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ElectricityViewController.h; sourceTree = "<group>"; };
+		A5402A55237BDE70007BB846 /* ElectricityViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ElectricityViewController.m; sourceTree = "<group>"; };
+		A5402A56237BDE70007BB846 /* ElectricityViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ElectricityViewController.xib; sourceTree = "<group>"; };
+		A5402A59237BE102007BB846 /* PollutantViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PollutantViewController.h; sourceTree = "<group>"; };
+		A5402A5A237BE102007BB846 /* PollutantViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PollutantViewController.m; sourceTree = "<group>"; };
+		A5402A5B237BE102007BB846 /* PollutantViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PollutantViewController.xib; sourceTree = "<group>"; };
+		A5402A5E237BE3E3007BB846 /* QYFatherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QYFatherViewController.h; sourceTree = "<group>"; };
+		A5402A5F237BE3E3007BB846 /* QYFatherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QYFatherViewController.m; sourceTree = "<group>"; };
+		A5402A62237BEEBA007BB846 /* ModelNetWorkingHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelNetWorkingHelper.h; sourceTree = "<group>"; };
+		A5402A63237BEEBA007BB846 /* NetWorkingHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWorkingHelper.h; sourceTree = "<group>"; };
+		A5402A64237BEEBA007BB846 /* ModelNetWorkingHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelNetWorkingHelper.m; sourceTree = "<group>"; };
+		A5402A65237BEEBA007BB846 /* NetWorkingHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWorkingHelper.m; sourceTree = "<group>"; };
+		A5402A68237BEF22007BB846 /* YearGeneralManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YearGeneralManager.h; sourceTree = "<group>"; };
+		A5402A69237BEF22007BB846 /* YearGeneralManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YearGeneralManager.m; sourceTree = "<group>"; };
+		A5402A6F237BFFFE007BB846 /* IndustrialView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IndustrialView.h; sourceTree = "<group>"; };
+		A5402A70237BFFFE007BB846 /* IndustrialView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IndustrialView.m; sourceTree = "<group>"; };
+		A5402A72237C007C007BB846 /* BarLineChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarLineChartView.h; sourceTree = "<group>"; };
+		A5402A73237C007C007BB846 /* BarLineChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarLineChartView.m; sourceTree = "<group>"; };
 		A596E7482379B92A009A3AD4 /* Nengyuan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nengyuan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A596E74B2379B92A009A3AD4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A596E74C2379B92A009A3AD4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -117,12 +166,111 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		A54029A12379BEDA007BB846 /* Common(常量) */ = {
+		A54029A12379BEDA007BB846 /* Common */ = {
 			isa = PBXGroup;
 			children = (
 				A54029A32379C0C5007BB846 /* NYCommon.h */,
 			);
-			path = "Common(常量)";
+			path = Common;
+			sourceTree = "<group>";
+		};
+		A54029AA237A4523007BB846 /* Vendors */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Vendors;
+			path = Nengyuan/Vendors;
+			sourceTree = SOURCE_ROOT;
+		};
+		A5402A3C237BD5BB007BB846 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				A5402A3D237BD5FF007BB846 /* UIViewController+SuperBase.h */,
+				A5402A3E237BD5FF007BB846 /* UIViewController+SuperBase.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		A5402A43237BDB6C007BB846 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				A5402A5E237BE3E3007BB846 /* QYFatherViewController.h */,
+				A5402A5F237BE3E3007BB846 /* QYFatherViewController.m */,
+				A5402A41237BDB46007BB846 /* GJMultipleMarkViewController.h */,
+				A5402A40237BDB46007BB846 /* GJMultipleMarkViewController.m */,
+				A5402A72237C007C007BB846 /* BarLineChartView.h */,
+				A5402A73237C007C007BB846 /* BarLineChartView.m */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		A5402A44237BDDC0007BB846 /* NYYearGeneral */ = {
+			isa = PBXGroup;
+			children = (
+				A5402A6E237BFFA6007BB846 /* Pollutant */,
+				A5402A6D237BFF97007BB846 /* Electricity */,
+				A5402A6C237BFF7A007BB846 /* Energy */,
+				A5402A6B237BFB1C007BB846 /* Social */,
+				A5402A45237BDDFA007BB846 /* NYYearGeneralController.h */,
+				A5402A46237BDDFA007BB846 /* NYYearGeneralController.m */,
+				A5402A47237BDDFA007BB846 /* NYYearGeneralController.xib */,
+			);
+			path = NYYearGeneral;
+			sourceTree = "<group>";
+		};
+		A5402A61237BEEA7007BB846 /* NetWorking */ = {
+			isa = PBXGroup;
+			children = (
+				A5402A62237BEEBA007BB846 /* ModelNetWorkingHelper.h */,
+				A5402A64237BEEBA007BB846 /* ModelNetWorkingHelper.m */,
+				A5402A63237BEEBA007BB846 /* NetWorkingHelper.h */,
+				A5402A65237BEEBA007BB846 /* NetWorkingHelper.m */,
+			);
+			path = NetWorking;
+			sourceTree = "<group>";
+		};
+		A5402A6B237BFB1C007BB846 /* Social */ = {
+			isa = PBXGroup;
+			children = (
+				A5402A4A237BDE38007BB846 /* SocialViewController.h */,
+				A5402A4B237BDE38007BB846 /* SocialViewController.m */,
+				A5402A4C237BDE38007BB846 /* SocialViewController.xib */,
+				A5402A68237BEF22007BB846 /* YearGeneralManager.h */,
+				A5402A69237BEF22007BB846 /* YearGeneralManager.m */,
+				A5402A6F237BFFFE007BB846 /* IndustrialView.h */,
+				A5402A70237BFFFE007BB846 /* IndustrialView.m */,
+			);
+			path = Social;
+			sourceTree = "<group>";
+		};
+		A5402A6C237BFF7A007BB846 /* Energy */ = {
+			isa = PBXGroup;
+			children = (
+				A5402A4F237BDE56007BB846 /* EnergyViewController.h */,
+				A5402A50237BDE56007BB846 /* EnergyViewController.m */,
+				A5402A51237BDE56007BB846 /* EnergyViewController.xib */,
+			);
+			path = Energy;
+			sourceTree = "<group>";
+		};
+		A5402A6D237BFF97007BB846 /* Electricity */ = {
+			isa = PBXGroup;
+			children = (
+				A5402A54237BDE70007BB846 /* ElectricityViewController.h */,
+				A5402A55237BDE70007BB846 /* ElectricityViewController.m */,
+				A5402A56237BDE70007BB846 /* ElectricityViewController.xib */,
+			);
+			path = Electricity;
+			sourceTree = "<group>";
+		};
+		A5402A6E237BFFA6007BB846 /* Pollutant */ = {
+			isa = PBXGroup;
+			children = (
+				A5402A59237BE102007BB846 /* PollutantViewController.h */,
+				A5402A5A237BE102007BB846 /* PollutantViewController.m */,
+				A5402A5B237BE102007BB846 /* PollutantViewController.xib */,
+			);
+			path = Pollutant;
 			sourceTree = "<group>";
 		};
 		A596E73F2379B92A009A3AD4 = {
@@ -158,7 +306,12 @@
 				A54029A4237A373C007BB846 /* NYMainCollectionViewCell.h */,
 				A54029A5237A373C007BB846 /* NYMainCollectionViewCell.m */,
 				A54029A6237A373C007BB846 /* NYMainCollectionViewCell.xib */,
-				A54029A12379BEDA007BB846 /* Common(常量) */,
+				A5402A61237BEEA7007BB846 /* NetWorking */,
+				A5402A44237BDDC0007BB846 /* NYYearGeneral */,
+				A5402A43237BDB6C007BB846 /* General */,
+				A5402A3C237BD5BB007BB846 /* Category */,
+				A54029AA237A4523007BB846 /* Vendors */,
+				A54029A12379BEDA007BB846 /* Common */,
 				A596E7512379B92A009A3AD4 /* Main.storyboard */,
 				A596E7572379B92C009A3AD4 /* Assets.xcassets */,
 				A596E7592379B92C009A3AD4 /* LaunchScreen.storyboard */,
@@ -305,11 +458,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5402A49237BDDFA007BB846 /* NYYearGeneralController.xib in Resources */,
+				A5402A58237BDE70007BB846 /* ElectricityViewController.xib in Resources */,
 				A596E75B2379B92C009A3AD4 /* LaunchScreen.storyboard in Resources */,
+				A5402A53237BDE56007BB846 /* EnergyViewController.xib in Resources */,
 				A54029A8237A373C007BB846 /* NYMainCollectionViewCell.xib in Resources */,
 				A596E7582379B92C009A3AD4 /* Assets.xcassets in Resources */,
 				A596E7532379B92A009A3AD4 /* Main.storyboard in Resources */,
 				A54029A02379BC08007BB846 /* MainViewController.xib in Resources */,
+				A5402A5D237BE102007BB846 /* PollutantViewController.xib in Resources */,
+				A5402A4E237BDE38007BB846 /* SocialViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,10 +585,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5402A60237BE3E3007BB846 /* QYFatherViewController.m in Sources */,
 				A596E7562379B92A009A3AD4 /* Nengyuan.xcdatamodeld in Sources */,
+				A5402A42237BDB46007BB846 /* GJMultipleMarkViewController.m in Sources */,
+				A5402A5C237BE102007BB846 /* PollutantViewController.m in Sources */,
 				A596E75E2379B92C009A3AD4 /* main.m in Sources */,
+				A5402A66237BEEBA007BB846 /* ModelNetWorkingHelper.m in Sources */,
+				A5402A67237BEEBA007BB846 /* NetWorkingHelper.m in Sources */,
+				A5402A74237C007C007BB846 /* BarLineChartView.m in Sources */,
+				A5402A4D237BDE38007BB846 /* SocialViewController.m in Sources */,
 				A54029A7237A373C007BB846 /* NYMainCollectionViewCell.m in Sources */,
+				A5402A6A237BEF22007BB846 /* YearGeneralManager.m in Sources */,
+				A5402A71237BFFFE007BB846 /* IndustrialView.m in Sources */,
+				A5402A3F237BD5FF007BB846 /* UIViewController+SuperBase.m in Sources */,
+				A5402A52237BDE56007BB846 /* EnergyViewController.m in Sources */,
 				A540299F2379BC08007BB846 /* MainViewController.m in Sources */,
+				A5402A48237BDDFA007BB846 /* NYYearGeneralController.m in Sources */,
+				A5402A57237BDE70007BB846 /* ElectricityViewController.m in Sources */,
 				A596E74D2379B92A009A3AD4 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

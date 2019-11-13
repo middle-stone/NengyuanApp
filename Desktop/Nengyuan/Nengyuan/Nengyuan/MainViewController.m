@@ -8,6 +8,7 @@
 
 #import "MainViewController.h"
 #import "NYMainCollectionViewCell.h"
+#import "NYYearGeneralController.h"
 
 @interface MainViewController ()<UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,UICollectionViewDataSource>
 @property (nonatomic, strong) UICollectionView * collectionView;
@@ -22,12 +23,18 @@ static NSString * const reuseIdentifier = @"NYMainCollectionViewCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"能源信息";
+    self.navigationController.navigationBar.barTintColor = ColorWithRGB(69, 139, 251);
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:[UIColor whiteColor]}; // title颜色
+
     [self initView];
     self.dataArray = @[@"年度概况",@"煤炭",@"油气",@"电力",@"可再生能源",@"价格",@"规上工业",@"能源报告"].mutableCopy;
     [self.collectionView reloadData];
 }
 
 -(void)initView {
+    UIBarButtonItem *addnew = [self barButtonItemWithTitle:@"退出"target:self action:@selector(ClickNavigationAction)];
+    self.navigationItem.rightBarButtonItem = addnew;
     
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
     CGFloat layoutWidth = ScreenWidth / 4.0;
@@ -44,6 +51,24 @@ static NSString * const reuseIdentifier = @"NYMainCollectionViewCell";
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
     [self.view addSubview:self.collectionView];
+}
+
+-(UIBarButtonItem *)barButtonItemWithTitle:(NSString *)titleName target:(id)target action:(SEL)action
+{
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.bounds = CGRectMake(-20, 10, 25, 25);
+    [button setTitleColor:ColorFromHex(0x3E729A) forState:(UIControlStateNormal)];
+    button.titleLabel.font = [UIFont systemFontOfSize:17];
+    button.imageView.contentMode = UIViewContentModeCenter;
+    [button setTitle:titleName forState:(UIControlStateNormal)];
+    button.adjustsImageWhenHighlighted = NO;
+    [button addTarget:target action:action forControlEvents:(UIControlEventTouchUpInside)];
+    
+    return [[UIBarButtonItem alloc] initWithCustomView:button];
+}
+
+- (void)ClickNavigationAction {
+    NSLog(@"退出");
 }
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
@@ -86,6 +111,16 @@ static NSString * const reuseIdentifier = @"NYMainCollectionViewCell";
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    switch (indexPath.row) {
+        case 0:{
+            NYYearGeneralController *yearVC = [[NYYearGeneralController alloc]init];
+            [self.navigationController pushViewController:yearVC animated:YES];
+            
+            break;
+        }
+        default:
+            break;
+    }
     NSLog(@"index:%ld",indexPath.row);
 }
 
