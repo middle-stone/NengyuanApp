@@ -8,6 +8,10 @@
 // 河南省产业结构
 #import "IndustrialView.h"
 #import "BarLineChartView.h"
+@interface IndustrialView()
+@property (nonatomic,strong) BarLineChartView *barView;
+
+@end
 
 @implementation IndustrialView
 
@@ -19,12 +23,7 @@
 }
 */
 
--(instancetype)initWithFrame:(CGRect)frame{
-    if (self = [super initWithFrame:frame]) {
-      
-    }
-    return self;
-}
+
 
 - (void)reloadData{
     [self initView];
@@ -79,14 +78,50 @@
         make.centerY.equalTo(bottomView.mas_centerY);
     }];
     
-    BarLineChartView *barView = [[BarLineChartView alloc]initWithFrame:CGRectMake(0, 80, [UIScreen mainScreen].bounds.size.width, 200) withYLines:self.leftYLines withMutiple:self.leftYMutiple withRightYlines:self.rightYLines withRightMut:self.rightYMutiple];
-    [self addSubview:barView];
-    barView.xdataArr = self.xdataArr;
-    barView.barDataArr = self.barDataArr;
-    barView.barPercentArr = self.barPercentArr;
-    barView.isShowLine = self.isShowLine;
-    barView.lineDataArr = self.lineDataArr;
-    [barView reloadData];
+    UITapGestureRecognizer *tapGes = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapClick:)];
+    [self addGestureRecognizer:tapGes];
+    
+    self.barView = [[BarLineChartView alloc]initWithFrame:CGRectMake(0, 80, [UIScreen mainScreen].bounds.size.width, 200) withYLines:self.leftYLines withMutiple:self.leftYMutiple withRightYlines:self.rightYLines withRightMut:self.rightYMutiple showLeftPercent:YES showRightPercent:NO];
+    [self addSubview:self.barView];
+    self.barView.xdataArr = self.xdataArr;
+    self.barView.barDataArr = self.barDataArr;
+    self.barView.barPercentArr = self.barPercentArr;
+    self.barView.isShowLine = self.isShowLine;
+    self.barView.lineDataArr = self.lineDataArr;
+    self.barView.colorArray = @[ColorWithRGB(171, 204, 100),ColorWithRGB(255, 213, 4),ColorWithRGB(85, 141, 214)].mutableCopy;
+    NSArray *title = @[@"第一产业",@"第二产业",@"第三产业"];
+    __weak typeof(self) weakSelf = self;
+    self.barView.clickBar = ^(NSInteger tag) {
+        NSMutableArray *infoArr = [NSMutableArray array];
+        for (NSInteger i = 0; i < self.barDataArr.count; i++) {
+            NSString *count = weakSelf.barDataArr[i][tag];
+            NSString *percent = weakSelf.barPercentArr[i][tag];
+            float tmpPer = percent.floatValue;
+            NSString *per = [NSString stringWithFormat:@"%.1f",tmpPer];
+            NSString *infoStr = [NSString stringWithFormat:@"%@ %@亿元 占比 %@%%",title[i],count,per];
+            [infoArr addObject: infoStr];
+            NSDictionary *attributes = @{NSFontAttributeName:[UIFont systemFontOfSize:15.0f],};
+            CGSize textSize = [infoStr boundingRectWithSize:CGSizeMake(ScreenWidth, 100) options:NSStringDrawingTruncatesLastVisibleLine attributes:attributes context:nil].size;;
+            [weakSelf.barView updateInfoViewWidth:textSize.width + 60];
+            weakSelf.barView.infoView.dataArray = infoArr;
+            [weakSelf.barView.infoView reloadData];
+           
+        }
+    };
+
+    [self.barView reloadData];
+}
+
+- (void)tapClick:(UITapGestureRecognizer *)sender {
+    for (UIView *tmpView in self.subviews) {
+        if ([tmpView isKindOfClass:[BarLineChartView class]]) {
+            for (UIView *tmpV in tmpView.subviews) {
+                if (tmpV.tag == 9999) {
+                    tmpV.hidden = YES;
+                }
+            }
+        }
+    }
 }
 
 @end

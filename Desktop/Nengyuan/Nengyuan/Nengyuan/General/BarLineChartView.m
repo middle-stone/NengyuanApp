@@ -7,7 +7,7 @@
 //
 
 #import "BarLineChartView.h"
-//#import "Masonry/Masonry.h"
+
 @interface BarLineChartView()
 
 @property (nonatomic, strong) CAShapeLayer *lineChartLayer;
@@ -23,12 +23,16 @@
 @property (nonatomic, assign) NSInteger Ylines;           // 右侧y轴的行数
 @property (nonatomic, assign) NSInteger lineMultiple;     // 折线倍数
 @property (nonatomic,assign) CGFloat barWith; // 柱状图的宽度
+
+@property (nonatomic,assign) BOOL showLeftPercent;  // 展示左侧百分号
+@property (nonatomic,assign) BOOL showRightPercent; // 展示右侧百分号
+@property (nonatomic,assign) NSInteger clickTag;    // 点击的哪一个柱状图
+
 @end
 
 @implementation BarLineChartView
 static CGFloat bounceX = 20;
 static CGFloat bounceY = 20;
-static NSInteger countq = 0;
 static CGFloat marge = 15; // 调整间距
 
 /*
@@ -39,14 +43,14 @@ static CGFloat marge = 15; // 调整间距
 }
 */
 
-- (instancetype)initWithFrame:(CGRect)frame withYLines:(NSInteger)ylines withMutiple:(NSInteger)mutiple withRightYlines:(NSInteger)rightLines withRightMut:(NSInteger)rightMut{
+- (instancetype)initWithFrame:(CGRect)frame withYLines:(NSInteger)ylines withMutiple:(NSInteger)mutiple withRightYlines:(NSInteger)rightLines withRightMut:(NSInteger)rightMut showLeftPercent:(BOOL)showLeft showRightPercent:(BOOL)showRight{
     if (self = [super initWithFrame:frame]) {
-        
         self.backgroundColor = [UIColor clearColor];
         self.lineMultiple = rightMut;
         self.Ylines = rightLines;
+        self.showLeftPercent = showLeft;
+        self.showRightPercent = showRight;
         [self createLabelY:ylines multiple:mutiple];
-//        [self createRightLabelY:rightLines multiple:rightMut];
         [self setLineDashWithYines:ylines];
     }
     return self;
@@ -103,11 +107,17 @@ static CGFloat marge = 15; // 调整间距
 - (void)createLabelY:(CGFloat)ylines multiple:(NSInteger)mutiple
 {
     for (NSInteger i = 0; i < ylines+1; i++) {
-        UILabel * labelYdivision = [[UILabel alloc]initWithFrame:CGRectMake(5, (self.frame.size.height - 2 * bounceY)/ylines *i + 0.75 * bounceX , bounceY + 10 , bounceY/2.0)];
+        UILabel * labelYdivision = [[UILabel alloc]initWithFrame:CGRectMake(0, (self.frame.size.height - 2 * bounceY)/ylines *i + 0.75 * bounceX , bounceY + 15 , bounceY/2.0)];
         labelYdivision.tag = 2000 + i;
         labelYdivision.textAlignment = NSTextAlignmentRight;
         NSNumber *YtextNum = [NSNumber numberWithInteger:(ylines - i)*mutiple];
-        labelYdivision.text = [NSString stringWithFormat:@"%@",YtextNum];
+        if (self.showLeftPercent) {
+            labelYdivision.text = [NSString stringWithFormat:@"%@%%",YtextNum];
+
+        }else{
+            labelYdivision.text = [NSString stringWithFormat:@"%@",YtextNum];
+
+        }
         labelYdivision.font = [UIFont systemFontOfSize:12];
         labelYdivision.textColor = [UIColor blackColor];
         [self addSubview:labelYdivision];
@@ -119,7 +129,13 @@ static CGFloat marge = 15; // 调整间距
     for (NSInteger i = 0; i < ylines + 1; i++) {
         UILabel * labelYdivision = [[UILabel alloc]initWithFrame:CGRectMake(self.bounds.size.width - 2*bounceX + 3, self.bounds.size.height -(bounceY*1.25 + (self.bounds.size.height - 2*bounceY)/ylines*i ),bounceY + 12 , bounceY/2.0)];
         labelYdivision.textAlignment = NSTextAlignmentLeft;
-        labelYdivision.text = [NSString stringWithFormat:@"%ld",i*mutiple];
+        if (self.showRightPercent) {
+            labelYdivision.text = [NSString stringWithFormat:@"%ld%%",i*mutiple];
+
+        }else{
+            labelYdivision.text = [NSString stringWithFormat:@"%ld",i*mutiple];
+
+        }
         labelYdivision.font = [UIFont systemFontOfSize:12];
         labelYdivision.textColor = [UIColor blackColor];
         [self addSubview:labelYdivision];
@@ -168,43 +184,44 @@ static CGFloat marge = 15; // 调整间距
         bgview.userInteractionEnabled = YES;
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tagClick:)];
         [bgview addGestureRecognizer:tap];
-        NSArray *colorArray = @[ColorWithRGB(85, 141, 214),ColorWithRGB(255, 213, 4),ColorWithRGB(171, 204, 100),ColorWithRGB(76, 173, 229)];
-
 
         float lastPercent = 0;    // 线的初始位置的百分比
         float lastEndPercent = 0; // 线的结束时的百分比
         for (int j = 0; j <percentArr.count; j++) {
             NSString *percentStr;
-          
+
+            float __block total = 0;
+            [percentArr enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                NSString *dataStr = ((NSArray *)obj)[i];
+                total = total + dataStr.floatValue;
+                NSLog(@"%f",total);
+            }];
             switch (j) {
-                case 0:
+                case 0:{
                     lastPercent = 0;
                      percentStr = percentArr[j][i];
-                    lastEndPercent = percentStr.floatValue;
+                    lastEndPercent = percentStr.floatValue / total;
                     break;
-                case 1:
-                    percentStr = percentArr[j - 1][i];
-                    lastPercent = lastPercent + percentStr.floatValue;
+                }
+                case 1:{
+                    lastPercent = lastEndPercent;
                     
                     percentStr = percentArr[j][i];
-                    lastEndPercent = lastEndPercent + percentStr.floatValue;
+                    lastEndPercent = lastEndPercent + percentStr.floatValue / total;
                     break;
+                }
                 case 2:{
-                    NSString *secondStr = percentArr[j - 1][i];
-                    float secondCount = secondStr.floatValue;
-                    lastPercent = lastPercent + secondCount;
+                    lastPercent = lastEndPercent;
                     
                     percentStr = percentArr[j][i];
-                    lastEndPercent =lastEndPercent + percentStr.floatValue;
+                    lastEndPercent =lastEndPercent + percentStr.floatValue / total;
                     break;
                 }
                 case 3:{
-                    NSString *thirdStr = percentArr[j - 1][i];
-                    float thirdCount = thirdStr.floatValue;
-                    lastPercent = lastPercent + thirdCount;
+                    lastPercent = lastEndPercent;
                     
                     percentStr = percentArr[j][i];
-                    lastEndPercent =lastEndPercent + percentStr.floatValue;
+                    lastEndPercent =lastEndPercent + percentStr.floatValue / total;
                     break;
                 }
                 default:
@@ -213,7 +230,7 @@ static CGFloat marge = 15; // 调整间距
             UIBezierPath *linePath = [[UIBezierPath alloc]init];
             [linePath moveToPoint:CGPointMake(width + 2*width*i, lastPercent *(self.bounds.size.height - 45) + 5)];
             CAShapeLayer *layer = [CAShapeLayer new];
-            layer.strokeColor = ((UIColor *)colorArray[j]).CGColor;
+            layer.strokeColor = ((UIColor *)self.colorArray[j]).CGColor;
             layer.fillColor = [UIColor clearColor].CGColor;
             layer.lineCap = kCALineCapSquare;
             layer.lineJoin = kCALineJoinBevel;
@@ -280,19 +297,42 @@ static CGFloat marge = 15; // 调整间距
 - (void)tagClick:(UITapGestureRecognizer *)recog {
     
     UITapGestureRecognizer *singleTap = (UITapGestureRecognizer *)recog;
-    NSLog(@"%ld",[singleTap view].tag);
+    NSInteger barTag = [singleTap view].tag - 100;
+    NSLog(@"%ld",barTag);
+    self.clickTag = barTag;
+    self.infoView.hidden = NO;
+    self.infoView.yearStr = self.xdataArr[barTag];
+    NSArray *arr = [[self.colorArray reverseObjectEnumerator] allObjects];
+    self.infoView.colorArr = arr.mutableCopy;
+    [self.infoView reloadData];
+    if (self.clickBar) {
+        self.clickBar(barTag);
+    }
     
 }
 
 - (void)reloadData{
     [self createLabelXWithXdataArray:self.xdataArr];
-    [self drawBarChartViewWithData:self.barDataArr withPercent:self.barPercentArr];
+    [self drawBarChartViewWithData:self.xdataArr withPercent:self.barPercentArr];
     if (self.isShowLine && self.lineDataArr.count) {
         [self createRightLabelY:self.Ylines multiple:self.lineMultiple];
         [self drawLineChartWithData:self.lineDataArr];
     }
 
    
+}
+
+- (void)updateInfoViewWidth:(CGFloat)width
+{
+    CGFloat viewX = (self.clickTag*self.barWith*2 + 40) > (ScreenWidth / 2) ? (self.clickTag*self.barWith*2 + 40) - ScreenWidth / 2 : 0;
+    CGFloat height = self.barPercentArr.count * 20 + 35;
+    [self.infoView mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(viewX);
+        make.top.equalTo(self);
+        make.width.mas_equalTo(width);
+        make.height.mas_equalTo(height);
+    }];
+    
 }
 
 - (NSMutableArray *)barDataArr {
@@ -308,5 +348,31 @@ static CGFloat marge = 15; // 调整间距
     }
     return _lineDataArr;
 }
+- (NSMutableArray *)infoArray {
+    if (!_infoArray) {
+        _infoArray = [[NSMutableArray alloc]init];
+    }
+    return _infoArray;
+}
+
+-(UIView *)infoView {
+    if (!_infoView) {
+        CGFloat height = self.barPercentArr.count * 20 + 35;
+        _infoView = [[InfoView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth/2, height)];
+        _infoView.tag = 9999;
+        _infoView.backgroundColor = ColorWithRGB(110, 110, 100);
+        _infoView.layer.cornerRadius = 5;
+        _infoView.clipsToBounds = YES;
+        [self addSubview:_infoView];
+//        [_infoView  mas_makeConstraints:^(MASConstraintMaker *make) {
+//            make.left.equalTo(0);
+//            make.top.equalTo(0);
+//            make.size.mas_equalTo(CGSizeMake(ScreenWidth / 2, height));
+//        }];
+
+    }
+    return _infoView;
+}
+
 
 @end

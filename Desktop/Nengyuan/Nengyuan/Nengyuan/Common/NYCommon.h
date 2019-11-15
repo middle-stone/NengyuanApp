@@ -37,6 +37,8 @@
 // 判断是否是iPhone X
 #define kDevice_Is_iPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
 
+#define ios11                    @available(iOS 11.0, *)
+
 //一个公共的用于处理解析数据的方法，过滤NSNull、nil、number、bool等类型转换成字符串
 #define GeneralHandlerToFiltNullValue(value)                                                            \
 ({                                                                                                  \

@@ -7,6 +7,8 @@
 //
 
 #import "UIViewController+SuperBase.h"
+#import "NSArray+DDKit.h"
+//#import <JSONKit>
 
 @implementation UIViewController (SuperBase)
 
@@ -62,7 +64,9 @@
     if(jsonString ==nil) {
         return nil;
     }
+    
     NSData*jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
+   
     NSError*err;
     NSDictionary*dic = [NSJSONSerialization JSONObjectWithData:jsonData
                                                        options:NSJSONReadingMutableContainers
@@ -71,17 +75,7 @@
         NSLog(@"json解析失败：%@",err);
         return nil;
     }
-    NSMutableDictionary*newdict=[[NSMutableDictionary alloc]init];
-    for(NSString*keys in dic)
-    {
-        if(dic[keys]==[NSNull null])
-        {
-            [newdict setObject:@" "forKey:keys];
-            continue;
-        }
-        [newdict setObject:[NSString stringWithFormat:@"%@",dic[keys]]forKey:keys];
-    }
-    return newdict;
+    return dic;
 }
 
 @end

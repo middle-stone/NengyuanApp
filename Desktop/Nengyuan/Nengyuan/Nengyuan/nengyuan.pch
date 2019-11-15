@@ -8,16 +8,47 @@
 
 #ifndef nengyuan_pch
 #define nengyuan_pch
-#endif /* nengyuan_pch */
+
 
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+//#import "NYCommon.h"
+//#import "UIViewController+SuperBase.h"
+//#import "Masonry.h"
+//#import "ModelNetWorkingHelper.h"
+//#import "NYRequestURL.h"
+//#import "NSArray+DDKit.h"
+//#import "UIView+ProgressHUD.h"
+
+#ifdef __OBJC__
 
 #import "NYCommon.h"
 #import "UIViewController+SuperBase.h"
 #import "Masonry.h"
 #import "ModelNetWorkingHelper.h"
+#import "NYRequestURL.h"
+#import "NSArray+DDKit.h"
+#import "UIView+ProgressHUD.h"
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+//#import "NetDataEngine.h"
+#import "ModularTypeModel.h"
+//常用的几种类型图表
+#import "GGGraphics.h"
+#import "SCChart.h"
+#import "LMJDropdownMenu.h"
+#import "HeadFirstView.h"
+#import "ChartLeftZhuRightZheView.h"
+#import "ChartLeftOneZhu.h"
+#import "ChartLeftMultiZhus.h"
+#import "ChartLeftLinesView.h"
+#import "ChartSCPieView.h"
+#import "LMJDropdownMenu.h"
 
 
+#endif
 
-
+#endif

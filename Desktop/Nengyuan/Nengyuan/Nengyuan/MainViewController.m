@@ -9,6 +9,7 @@
 #import "MainViewController.h"
 #import "NYMainCollectionViewCell.h"
 #import "NYYearGeneralController.h"
+#import "MeiTanViewController.h"
 
 @interface MainViewController ()<UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,UICollectionViewDataSource>
 @property (nonatomic, strong) UICollectionView * collectionView;
@@ -116,6 +117,11 @@ static NSString * const reuseIdentifier = @"NYMainCollectionViewCell";
             NYYearGeneralController *yearVC = [[NYYearGeneralController alloc]init];
             [self.navigationController pushViewController:yearVC animated:YES];
             
+            break;
+        }
+        case 1:{
+            MeiTanViewController *meitanVc=[[MeiTanViewController alloc]init];
+            [self.navigationController pushViewController:meitanVc animated:YES];
             break;
         }
         default:
